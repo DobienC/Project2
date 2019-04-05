@@ -10,3 +10,10 @@ CREATE TABLE users (
   password varchar(60) NOT NULL,
   PRIMARY KEY(id)
 );
+
+CREATE TABLE post (
+  id int AUTO_INCREMENT,
+  title varchar(50) NOT NULL,
+  text varchar(180) NOT NULL,
+  author varchar()
+)
