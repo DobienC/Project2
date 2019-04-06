@@ -8,7 +8,7 @@ module.exports = function(app) {
         msg: "Welcome!!!!",
         users: dbUsers,
         msg: "Welcome!",
-        examples: dbExamples
+        examples: dbUsers
       });
     });
   });
