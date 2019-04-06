@@ -2,6 +2,8 @@ DROP DATABASE IF EXISTs verykoi;
 CREATE DATABASE verykoi;
 USE verykoi;
 
+DROP DATABASE IF EXISTS post_db;
+CREATE DATABASE post_db;
 -- Create the table actors.
 CREATE TABLE users (
   id int AUTO_INCREMENT,
