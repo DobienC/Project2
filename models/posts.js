@@ -1,24 +1,30 @@
 module.exports = function(sequelize, DataTypes) {
   var Post = sequelize.define("Post", {
-    title: {
+    category: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [1]
+      defaultValue: "Blog"
       }
     },
-    body: {
+    { body: {
       type: DataTypes.TEXT,
       allowNull: false,
       validate: {
         len: [1]
       }
     },
-    category: {
-      type: DataTypes.STRING,
-      defaultValue: "Blog"
-    }
+    created_at: Sequelize.DATE,
   });
+ 
+  // associating the post with the user db
+  Post.associate = function(models) {
+    Post.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
   return Post;
 };
 
