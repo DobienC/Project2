@@ -9,6 +9,7 @@ module.exports = function(app) {
         examples: dbExamples
       });
     });
+    // res.render("index");
   });
 
   // Load example page and pass in an example by id
@@ -20,7 +21,12 @@ module.exports = function(app) {
         example: dbExample
       });
     });
+    // res.render("example");
   });
+
+  // app.get("/tester", function(req, res) {
+  //   res.render(form);
+  // });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {

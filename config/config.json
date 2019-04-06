@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "e54p0ppy8kg0fast",
-    "password": "tfcr5df37waif08n",
+    "username": "masterted",
+    "password": "TED",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql"
