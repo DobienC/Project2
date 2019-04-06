@@ -6,7 +6,7 @@ module.exports = function(app) {
     db.User.findAll({}).then(function(dbUsers) {
       res.render("index", {
         msg: "Welcome!!!!",
-        users: dbUsers
+        users: dbUsers,
         msg: "Welcome!",
         examples: dbExamples
       });
