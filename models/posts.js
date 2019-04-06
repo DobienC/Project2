@@ -4,16 +4,14 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       defaultValue: "Blog"
-      }
-    },
-    { body: {
+      },
+    body: {
       type: DataTypes.TEXT,
       allowNull: false,
       validate: {
         len: [1]
-      }
+      },
     },
-    created_at: Sequelize.DATE,
   });
  
   // associating the post with the user db
