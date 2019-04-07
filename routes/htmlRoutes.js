@@ -22,12 +22,6 @@ module.exports = function(app) {
     });
   });
 
-  // app.get("/api/users", function(req, res) {
-  //   db.User.findAll({}).then(function(dbUsers) {
-  //     res.json(dbUsers);
-  //   });
-  // });
-
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
