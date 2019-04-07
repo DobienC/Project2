@@ -1,7 +1,78 @@
+
 body, html {
   background-image: url("https://radfishlures.com/wp-content/uploads/2018/08/ThinkstockPhotos-942157916-e1534865738428.jpg");
 }
 
+
+body, html {
+  background-image: url("https://radfishlures.com/wp-content/uploads/2018/08/ThinkstockPhotos-942157916-e1534865738428.jpg");
+ /* The image used */
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+#goFish {
+  margin: 100px;
+}
+
+
+button.submit {
+  float: right;
+}
+
+form#cms {
+  margin-top: 50px;
+}
+
+#cms textarea {
+  resize: none;
+}
+
+.card-header button.delete,
+button.edit {
+  float: right;
+  margin: 5px;
+}
+
+.author-container {
+  margin-top: 50px;
+}
+
+.author-list {
+  margin-top: 25px;
+}
+
+.blog-container {
+  margin-top: 30px;
+}
+
+.blog {
+  margin-top: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+#author-name {
+  width: 100%;
+  height: 35px;
+  margin-top: 5px;
+}
+
+.top-30 {
+  margin-top: 30px;
+}
+
+
+>>>>>>> d66d94b5b5560c5f5be14f56e14cf25cb2b42df1
 .list-group-item {
   line-height: 2.5;
 }
