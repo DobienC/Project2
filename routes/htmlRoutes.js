@@ -7,13 +7,11 @@ module.exports = function(app) {
       res.render("index", {
         msg: "Welcome!!!!",
         users: dbUsers,
-<<<<<<< HEAD
         msg: "Welcome!",
-        examples: dbUsers
-=======
+        examples: dbUsers,
         msg: "Welcome!"
         // examples: dbExamples
->>>>>>> origin
+
       });
     });
   });
