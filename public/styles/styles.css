@@ -6,6 +6,7 @@ body, html {
 
 body, html {
   background-image: url("https://radfishlures.com/wp-content/uploads/2018/08/ThinkstockPhotos-942157916-e1534865738428.jpg");
+
  /* The image used */
 
   /* Full height */
@@ -72,7 +73,6 @@ button.edit {
 }
 
 
->>>>>>> d66d94b5b5560c5f5be14f56e14cf25cb2b42df1
 .list-group-item {
   line-height: 2.5;
 }
