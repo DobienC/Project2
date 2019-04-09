@@ -10,8 +10,6 @@ module.exports = function(app) {
         msg: "Welcome!",
         examples: dbUsers,
         msg: "Welcome!"
-        // examples: dbExamples
-
       });
     });
   });
