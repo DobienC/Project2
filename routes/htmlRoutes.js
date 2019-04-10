@@ -10,6 +10,7 @@ module.exports = function(app) {
         msg: "Welcome!",
         examples: dbUsers,
         msg: "Welcome!"
+        // examples: dbExamples
       });
     });
   });
@@ -23,11 +24,9 @@ module.exports = function(app) {
     });
   });
 
-  // app.get("/api/users", function(req, res) {
-  //   db.User.findAll({}).then(function(dbUsers) {
-  //     res.json(dbUsers);
-  //   });
-  // });
+  app.get("/blog", function(req, res) {
+    res.render("404");
+  });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
