@@ -31,10 +31,11 @@ module.exports = function(app) {
 
   // Delete a user by id
   app.delete("/api/users/:id", function(req, res) {
-    db.User.destroy({ 
-      where: { 
+    db.User.destroy({
+      where: {
         id: req.params.id
-       } }).then(function(dbUsers) {
+      }
+    }).then(function(dbUsers) {
       res.json(dbUsers);
     });
   });
