@@ -1,3 +1,15 @@
+body, html {
+  background-image: url("https://radfishlures.com/wp-content/uploads/2018/08/ThinkstockPhotos-942157916-e1534865738428.jpg");
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
 .list-group-item {
   line-height: 2.5;
 }

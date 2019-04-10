@@ -11,7 +11,6 @@ module.exports = function(app) {
         examples: dbUsers,
         msg: "Welcome!"
         // examples: dbExamples
-
       });
     });
   });
@@ -23,6 +22,10 @@ module.exports = function(app) {
         user: dbUser
       });
     });
+  });
+
+  app.get("/blog", function(req, res) {
+    res.render("404");
   });
 
   // Render 404 page for any unmatched routes
