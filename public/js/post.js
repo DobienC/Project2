@@ -29,9 +29,9 @@ var createPost = function() {
   var $url = $("#post-url").val();
 
   var post = {
-    title: $title,
+    category: $title,
     body: $body,
-    url: $url
+    image: $url
   }
 
   API.createPost(post);
@@ -49,7 +49,7 @@ function populate() {
       var $text = $('<p class="card-text">');
       var $bot = $('<div class="w-100">');
 
-      $img.attr("src", data[i].url);
+      $img.attr("src", data[i].image);
       $title.text(data[i].category);
       $text.text(data[i].body);
 
