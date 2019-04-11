@@ -27,13 +27,11 @@ var createPost = function() {
   var $title = $("#post-text").val();
   var $body = $("#post-description").val();
   var $url = $("#post-url").val();
-
   var post = {
     category: $title,
     body: $body,
     image: $url
   }
-
   API.createPost(post);
   populate();
 }
@@ -48,18 +46,15 @@ function populate() {
       var $title = $('<h4 class="card-title">');
       var $text = $('<p class="card-text">');
       var $bot = $('<div class="w-100">');
-
       $img.attr("src", data[i].image);
       $title.text(data[i].category);
       $text.text(data[i].body);
-
       $head.append($img);
       $block.append($title);
       $block.append($text);
       $card.append($head);
       $card.append($block);
       $card.append($bot);
-
       $("#destination").append($card);
     }
   })
