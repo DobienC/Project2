@@ -21,7 +21,7 @@ var API = {
       type: "DELETE"
     });
   }
-}
+};
 
 var createPost = function() {
   var $title = $("#post-text").val();
@@ -32,22 +32,22 @@ var createPost = function() {
     category: $title,
     body: $body,
     image: $url
-  }
+  };
 
   API.createPost(post);
   populate();
-}
+};
 
 function populate() {
   API.getPosts().then(function(data) {
     for (var i = 0; i < data.length; i++) {
-      var $card = $('<div class="card flex-row flex-wrap mt-3">');
-      var $head = $('<div class="card-header border-0">');
-      var $img = $('<img src="" alt="">');
-      var $block = $('<div class="card-block px-2">');
-      var $title = $('<h4 class="card-title">');
-      var $text = $('<p class="card-text">');
-      var $bot = $('<div class="w-100">');
+      var $card = $("<div class='card flex-row flex-wrap mt-3'>");
+      var $head = $("<div class='card-header border-0'>");
+      var $img = $("<img src='' alt=''>");
+      var $block = $("<div class='card-block px-2'>");
+      var $title = $("<h4 class='card-title'>");
+      var $text = $("<p class='card-text'>");
+      var $bot = $("<div class='w-100'>");
 
       $img.attr("src", data[i].image);
       $title.text(data[i].category);
@@ -62,7 +62,7 @@ function populate() {
 
       $("#destination").append($card);
     }
-  })
+  });
 }
 
 $(document).ready(function() {

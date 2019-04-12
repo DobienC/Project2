@@ -36,7 +36,6 @@ module.exports = function(app) {
         id: req.params.id
       }
     }).then(function(dbUsers) {
-    
       res.json(dbUsers);
     });
   });
