@@ -77,7 +77,7 @@ $(document).ready(function() {
     console.log(title);
     console.log(body);
     API.createPost({
-      UserId: 1,
+      UserId: 2,
       title: title,
       body: body
     }).then(function() {

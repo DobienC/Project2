@@ -1,7 +1,9 @@
 body, html {
   background-image: url("https://radfishlures.com/wp-content/uploads/2018/08/ThinkstockPhotos-942157916-e1534865738428.jpg");
   /* Full height */
-  height: 100%; 
+  position: absolute; 
+  width: 100%;
+  height: 100%;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -13,6 +15,7 @@ body, html {
 .list-group-item {
   line-height: 2.5;
 }
+
 
 
 /* -------------------------------- 
@@ -160,7 +163,7 @@ Login/Signup modal window - by CodyHouse.co
     margin-left: 1em;
   }
   .cd-main-nav__list li:nth-last-child(2) {
-    margin-left: 60em;
+    margin-left: 2em;
   }
   .cd-main-nav__item {
     display: inline-block;
@@ -176,7 +179,7 @@ Login/Signup modal window - by CodyHouse.co
     border: 1px solid rgba(255, 255, 255, 0.6);
   }
   .cd-main-nav__item.cd-main-nav__item--signup {
-    background: #2f889a;
+    background: #044a58;
   }
 }
 

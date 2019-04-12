@@ -29,7 +29,38 @@
 	<!-- MDB core JavaScript -->
 	<script type="text/javascript" src="/MDB/js/mdb.min.js"></script>
   <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar navbar-expand-lg navbar-dark indigo">
+		<a class="navbar-brand" href="#">VERYKOI</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+			aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="/">Home
+				<span class="sr-only">(current)</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#blog">Posts</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Buy/Sell </a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Lakes </a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Fish Species </a>
+			</li>
+			</ul>
+			<span class="navbar-text white-text">
+			Go Fishing!
+			</span>
+		</div>
+		</nav>
+  {{!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <a class="navbar-brand" href="/">VeryKoi</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
@@ -39,12 +70,14 @@
                         <ul class="cd-main-nav__list js-signin-modal-trigger">
                         <li><a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a></li>
                         <li><a class="nav-item nav-link" href="/blog">Posts</a></li>
-                        <li><a class="cd-main-nav__item cd-main-nav__item--signin" href="#0" data-signin="login">Sign in</a></li>
-				                <li><a class="cd-main-nav__item cd-main-nav__item--signup" href="#0" data-signin="signup">Sign up</a></li>
+                        <li><a class="nav-item nav-link" id="signIn" href="#0" data-signin="login">Sign in</a></li>
+				        <li><a class="nav-item nav-link" id="signUp" href="#0" data-signin="signup">Sign up</a></li>
                         </ul>
                       </div>
                     </div>
                   </nav>
+	  <div class="row"> --}}
+				
               </header>
 
   {{{body}}}
@@ -138,10 +171,12 @@
 			<a href="#0" class="cd-signin-modal__close js-close">Close</a>
 		</div> <!-- cd-signin-modal__container -->
 	</div> <!-- cd-signin-modal -->
+	<div id="foobar"></div>
 
 
 <script src="js/placeholders.min.js"></script> <!-- polyfill for the HTML5 placeholder attribute -->
 <script src="js/main.js"></script> <!-- Resource JavaScript -->
+
 
 
 </html>
