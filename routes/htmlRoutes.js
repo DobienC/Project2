@@ -25,7 +25,7 @@ module.exports = function(app) {
   });
 
   app.get("/blog", function(req, res) {
-    res.render("404");
+    res.render("posts");
   });
 
   // Render 404 page for any unmatched routes

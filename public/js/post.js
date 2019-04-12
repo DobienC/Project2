@@ -8,7 +8,7 @@ var API = {
   createPost: function(post) {
     return $.ajax({
       headers: {
-        "Content-Type": "apploication/json"
+        "Content-Type": "application/json"
       },
       type: "POST",
       url: "api/posts",
@@ -79,6 +79,26 @@ function populate() {
 $(document).ready(function() {
   console.log("ready");
   populate();
+  renderPosts();
+  $submitPost = $("#submitPost");
+  $submitPost.on("click", function() {
+    console.log("button clicked");
+    var title = $("#example-text").val();
+    var body = $("#example-description").val();
+    console.log(title);
+    console.log(body);
+    API.createPost({
+      UserId: 1,
+      title: title,
+      body: body
+    }).then(function() {
+      renderPosts();
+    });
+  });
 });
 
-$submitBtn.on("click", createPost);
+function renderPosts() {
+  API.getPosts().then(function(results) {
+    console.log(results);
+  });
+}
