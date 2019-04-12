@@ -1,5 +1,5 @@
-(function(){
-//Login/Signup modal window - by CodyHouse.co
+(function() {
+  //Login/Signup modal window - by CodyHouse.co
   function ModalSignin(element) {
     this.element = element;
     this.blocks = this.element.getElementsByClassName('js-signin-modal-block');
@@ -7,12 +7,12 @@
     this.triggers = document.getElementsByClassName('js-signin-modal-trigger');
     this.hidePassword = this.element.getElementsByClassName('js-hide-password');
     this.init();
-};
+  }
 
   ModalSignin.prototype.init = function() {
     var self = this;
     //open modal/switch form
-    for(var i =0; i < this.triggers.length; i++) {
+    for (var i = 0; i < this.triggers.length; i++) {
         (function(i){
             self.triggers[i].addEventListener('click', function(event){
                 if( event.target.hasAttribute('data-signin') ) {
@@ -123,12 +123,12 @@ function toggleClass(el, className, bool) {
     else removeClass(el, className);
 }
 
-//credits http://css-tricks.com/snippets/jquery/move-cursor-to-end-of-textarea-or-input/
-function putCursorAtEnd(el) {
+  //credits http://css-tricks.com/snippets/jquery/move-cursor-to-end-of-textarea-or-input/
+  function putCursorAtEnd(el) {
     if (el.setSelectionRange) {
-        var len = el.value.length * 2;
-            el.focus();
-            el.setSelectionRange(len, len);
+      var len = el.value.length * 2;
+      el.focus();
+      el.setSelectionRange(len, len);
     } else {
       el.value = el.value;
     }

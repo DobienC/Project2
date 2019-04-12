@@ -35,11 +35,7 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       }
-<<<<<<< HEAD
-   }).then(function(dbUsers) {
-=======
     }).then(function(dbUsers) {
->>>>>>> master
       res.json(dbUsers);
     });
   });
