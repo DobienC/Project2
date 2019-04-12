@@ -8,6 +8,4 @@ var userPassword = $("password");
 $(document).on("submit", "signIn-form", handleUserSignInSubmit);
 $(document).on("click", ".create-user", handleCreateAccountPress);
 
-
 addUsers();
-

@@ -27,7 +27,6 @@ var createPost = function() {
   var $title = $("#post-text").val();
   var $body = $("#post-description").val();
   var $url = $("#post-url").val();
-
   var post = {
     category: $title,
     body: $body,
@@ -40,7 +39,8 @@ var createPost = function() {
 
 function populate() {
   API.getPosts().then(function(data) {
-    for (var i = 0; i < data.length; i++) {
+    $("#destination").empty();
+    for (var i = data.length - 1; i >= 0; i--) {
       var $card = $("<div class='card flex-row flex-wrap mt-3'>");
       var $head = $("<div class='card-header border-0'>");
       var $img = $("<img src='' alt=''>");
@@ -52,14 +52,12 @@ function populate() {
       $img.attr("src", data[i].image);
       $title.text(data[i].category);
       $text.text(data[i].body);
-
       $head.append($img);
       $block.append($title);
       $block.append($text);
       $card.append($head);
       $card.append($block);
       $card.append($bot);
-
       $("#destination").append($card);
     }
   });
@@ -72,16 +70,25 @@ $(document).ready(function() {
   $submitPost = $("#submitPost");
   $submitPost.on("click", function() {
     console.log("button clicked");
-    var title = $("#example-text").val();
-    var body = $("#example-description").val();
+    var title = $("#post-title").val();
+    var body = $("#post-body").val();
+    var image = $("#post-image").val();
     console.log(title);
     console.log(body);
     API.createPost({
+<<<<<<< HEAD
       UserId: 2,
       title: title,
       body: body
+=======
+      category: title,
+      body: body,
+      image: image,
+      UserId: 3
+>>>>>>> master
     }).then(function() {
       renderPosts();
+      populate();
     });
   });
 });
