@@ -40,6 +40,18 @@ module.exports = function(app) {
     });
   });
 
+  app.post("/api/sign-up", function(req, res) {
+    db.User.creat(req.body).then(function(dbUsers) {
+      res.json(dbUsers);
+    })
+  });
+
+  app.post("/api/sign-in", function(req, res){
+    db.User.findOne({}).then(function(dbUsers) {
+      res.json(dbUsers);
+    })
+  });
+
   // Get all Posts
   app.get("/api/posts", function(req, res) {
     db.Post.findAll({}).then(function(dbPosts) {
