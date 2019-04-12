@@ -21,7 +21,7 @@ var API = {
       type: "DELETE"
     });
   }
-}
+};
 
 var createPost = function() {
   var $title = $("#post-text").val();
@@ -31,14 +31,20 @@ var createPost = function() {
     category: $title,
     body: $body,
     image: $url
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> master
   API.createPost(post);
   populate();
-}
+};
 
 function populate() {
   API.getPosts().then(function(data) {
     for (var i = 0; i < data.length; i++) {
+<<<<<<< HEAD
       var $card = $('<div class="card flex-row flex-wrap mt-3">');
       var $head = $('<div class="card-header border-0">');
       var $img = $('<img src="" alt="">');
@@ -46,6 +52,16 @@ function populate() {
       var $title = $('<h4 class="card-title">');
       var $text = $('<p class="card-text">');
       var $bot = $('<div class="w-100">');
+=======
+      var $card = $("<div class='card flex-row flex-wrap mt-3'>");
+      var $head = $("<div class='card-header border-0'>");
+      var $img = $("<img src='' alt=''>");
+      var $block = $("<div class='card-block px-2'>");
+      var $title = $("<h4 class='card-title'>");
+      var $text = $("<p class='card-text'>");
+      var $bot = $("<div class='w-100'>");
+
+>>>>>>> master
       $img.attr("src", data[i].image);
       $title.text(data[i].category);
       $text.text(data[i].body);
@@ -57,7 +73,7 @@ function populate() {
       $card.append($bot);
       $("#destination").append($card);
     }
-  })
+  });
 }
 
 $(document).ready(function() {
