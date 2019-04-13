@@ -1,10 +1,10 @@
 //load bcrypt
 var bCrypt = require("bcrypt-nodejs");
-var LocalStrategy = require("passport-local").Strategy;
-var User = require("../../models");
+
 
 module.exports = function(passport, user) {
-  // var User = user;
+  var User = user;
+  var LocalStrategy = require("passport-local").Strategy;
 
   passport.serializeUser(function(user, done) {
     done(null, user.user_id);
