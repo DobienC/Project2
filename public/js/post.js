@@ -23,19 +23,19 @@ var API = {
   }
 };
 
-var createPost = function() {
-  var $title = $("#post-text").val();
-  var $body = $("#post-description").val();
-  var $url = $("#post-url").val();
-  var post = {
-    category: $title,
-    body: $body,
-    image: $url
-  };
+// var createPost = function() {
+//   var $title = $("#post-text").val();
+//   var $body = $("#post-description").val();
+//   var $url = $("#post-url").val();
+//   var post = {
+//     category: $title,
+//     body: $body,
+//     image: $url
+//   };
 
-  API.createPost(post);
-  populate();
-};
+//   API.createPost(post);
+//   populate();
+// };
 
 function populate() {
   API.getPosts().then(function(data) {
@@ -49,8 +49,11 @@ function populate() {
       var $text = $("<p class='card-text'>");
       var $bot = $("<div class='w-100'>");
 
-      $img.attr("src", data[i].image);
-      $title.text(data[i].category);
+      // $img.attr("src", data[i].image);
+      // $title.text(data[i].category);
+      // $text.text(data[i].body);
+      $img.attr("src", data[i].category);
+      $title.text("Post #" + data[i].post_id);
       $text.text(data[i].body);
       $head.append($img);
       $block.append($title);
@@ -70,16 +73,18 @@ $(document).ready(function() {
   $submitPost = $("#submitPost");
   $submitPost.on("click", function() {
     console.log("button clicked");
-    var title = $("#post-title").val();
-    var body = $("#post-body").val();
+    var body = $("#post-title").val();
+    body = body + " " + $("#post-body").val();
     var image = $("#post-image").val();
-    console.log(title);
+    // var title = $("#post-title").val();
+    // var body = $("#post-body").val();
+    // var image = $("#post-image").val();
+    // console.log(title);
     console.log(body);
     API.createPost({
-      category: title,
+      category: image,
       body: body,
-      image: image,
-      UserId: 3
+      UserUserId: 1
     }).then(function() {
       renderPosts();
       populate();
@@ -91,8 +96,4 @@ function renderPosts() {
   API.getPosts().then(function(results) {
     console.log(results);
   });
-
 }
-
-}
-
