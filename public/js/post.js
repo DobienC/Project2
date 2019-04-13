@@ -49,8 +49,11 @@ function populate() {
       var $text = $("<p class='card-text'>");
       var $bot = $("<div class='w-100'>");
 
-      $img.attr("src", data[i].image);
-      $title.text(data[i].category);
+      // $img.attr("src", data[i].image);
+      // $title.text(data[i].category);
+      // $text.text(data[i].body);
+      $img.attr("src", data[i].category);
+      $title.text("Post #" + data[i].post_id);
       $text.text(data[i].body);
       $head.append($img);
       $block.append($title);
@@ -70,13 +73,16 @@ $(document).ready(function() {
   $submitPost = $("#submitPost");
   $submitPost.on("click", function() {
     console.log("button clicked");
-    var title = $("#post-title").val();
-    var body = $("#post-body").val();
+    var body = $("#post-title").val();
+    body = body + " " + $("#post-body").val();
+    var image = $("#post-image").val();
+    // var title = $("#post-title").val();
+    // var body = $("#post-body").val();
     // var image = $("#post-image").val();
-    console.log(title);
+    // console.log(title);
     console.log(body);
     API.createPost({
-      category: title,
+      category: image,
       body: body,
       UserUserId: 1
     }).then(function() {
