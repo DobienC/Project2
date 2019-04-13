@@ -11,7 +11,7 @@ exports.signin = function(req, res) {
 exports.blog = function(req, res) {
   res.render("blog", { username: req.user.username, signedin: true });
 };
-// Ray added to control the navbar login logout
+
 exports.logout = function(req, res) {
   req.session.destroy(function(err) {
     res.redirect("/");
