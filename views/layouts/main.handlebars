@@ -30,8 +30,49 @@
 	<script type="text/javascript" src="/MDB/js/mdb.min.js"></script>
   
 <header>
+  <!--Navbar -->
+<nav class="mb-1 navbar navbar-dark bg-dark">
+ <!-- Just an image -->
+
+  <a class="navbar-brand" href="#">
+    <img src="http://calnev-email.brtapp.com/files/graphics/koi3.png" height="100" alt="verykoi logo">
+  </a>
+  <a class="navbar-brand" href="/">VERYKOI</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+    aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home
+          
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/blog">Blog</a>
+          
+      </li>
+      {{!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user"></i> Profile </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+          <a class="dropdown-item" href="#">My account</a>
+          <a class="dropdown-item" href="#">Log out</a>
+        </div>
+      </li> --}}
+    </ul>
+  </div>
+  <form class="fo rm-inline my-2 my-lg-0 ml-auto">
+         {{>navbar/navbar-block}}
+        </form>
+</nav>
+<!--/.Navbar -->
+
   {{!-- Navbar --}}
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  {{!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">VeryKoi</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -47,7 +88,7 @@
         <form class="fo rm-inline my-2 my-lg-0 ml-auto">
          {{>navbar/navbar-block}}
         </form>
-  </nav>
+  </nav> --}}
 </header>
                 
 
@@ -62,13 +103,13 @@
 </body>
 
 
-<footer class="navbar sticky-bottom justify-content-center navbar-dark bg-dark footer">
+<footer class="navbar sticky-bottom justify-content-center navbar-dark bg-dark footer page-footer fixed-bottom">
 
         <p class="navbar-brand footer-text" id="copyright">
             Built by:&nbsp;&nbsp;
             <a class="author" href="https://github.com/DobienC" target="_blank">Dobien,  </a>
             <a class="author" href="https://github.com/Ellyshachavez" target="_blank">Ellysha Chavez, </a>
-            <a class="author" href="https://github.com/tuayang" target="_blank">Toua Yang, </a>
+            <a class="author" href="https://github.com/tuayang" target="_blank">Toua Yang </a>
         </p>
 </footer>
 </html>
