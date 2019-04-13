@@ -91,5 +91,8 @@ function renderPosts() {
   API.getPosts().then(function(results) {
     console.log(results);
   });
+
 }
-git
+
+}
+
