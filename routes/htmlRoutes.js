@@ -34,9 +34,9 @@ app.get("/signin", function (req, res) {
   res.render("signin");
 });
 
-  // app.get("/blog", function(req, res) {
-  //   res.render("posts");
-  // });
+  app.get("/blog", function(req, res) {
+    res.render("posts");
+  });
 
 
   app.get("/blog/:id",  function (req, res) {

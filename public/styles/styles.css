@@ -1,6 +1,6 @@
 body, html {
-  background-image: url("https://radfishlures.com/wp-content/uploads/2018/08/ThinkstockPhotos-942157916-e1534865738428.jpg");
-  /* Full height */
+  background-image: url("https://images8.alphacoders.com/693/693313.jpg");
+  /* Full height - https://radfishlures.com/wp-content/uploads/2018/08/ThinkstockPhotos-942157916-e1534865738428.jpg */ 
   height: 100%; 
 
   /* Center and scale the image nicely */
@@ -10,13 +10,23 @@ body, html {
 
 }
 
+#goFish {
+  margin-top: 70px;
+  max-width: 100%;
+  height: auto;
+}
+
 .list-group-item {
   line-height: 2.5;
 }
 
 
+
 /* Signin styles */
 .sign-in {
+  margin: 47px;
+}
+.sign-up {
   margin: 47px;
 }
 
@@ -33,3 +43,5 @@ body, html {
   position: fixed;
   bottom: 0;
 }
+
+
