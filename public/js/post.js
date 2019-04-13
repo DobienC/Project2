@@ -53,6 +53,8 @@ function populate() {
       // $title.text(data[i].category);
       // $text.text(data[i].body);
       $img.attr("src", data[i].category);
+      $img.attr("height", "400");
+      $img.attr("width", "600");
       $title.text("Post #" + data[i].post_id);
       $text.text(data[i].body);
       $head.append($img);
