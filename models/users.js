@@ -10,10 +10,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(50),
       allowNull: false
     },
-    email: {
-      type: DataTypes.STRING(100),
-      allowNull: false
-    },
     password: {
       type: DataTypes.TEXT,
       allowNull: false
@@ -21,3 +17,5 @@ module.exports = function(sequelize, DataTypes) {
   });
   return User;
 };
+
+

@@ -21,23 +21,8 @@ module.exports = function(sequelize, DataTypes) {
       image: {
         type: DataTypes.STRING
       }
-
-      }
-    },
-    image: {
-      type: DataTypes.STRING
-
     }
   });
-
-  // associating the post with the user db
-  Post.associate = function(models) {
-    Post.belongsTo(models.User, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
 
   return Post;
 };
