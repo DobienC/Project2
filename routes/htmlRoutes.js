@@ -24,10 +24,43 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/blog", function(req, res) {
-    res.render("posts");
-  });
+ // Signup form
+ app.get("/signup", function (req, res) {
+  res.render("signup");
+});
 
+//Sign in form
+app.get("/signin", function (req, res) {
+  res.render("signin");
+});
+
+  // app.get("/blog", function(req, res) {
+  //   res.render("posts");
+  // });
+
+
+  app.get("/blog/:id",  function (req, res) {
+    db.Post.findAll({
+      where: {
+        post_id: req.params.id
+      }
+    }).then(function (hostData) {
+      db.Users_games.findAll({
+        where: {
+          UserUserId: req.params.id
+        },
+        include: [{
+          model: db.Hosted_games
+        }]
+      }).then(function (userData) {
+        console.log(userData);
+        res.render("dashboard", {
+          hostData: hostData,
+          userData: userData
+        })
+      });
+    });
+  });
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");

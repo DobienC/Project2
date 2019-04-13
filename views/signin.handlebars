@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="card sign-in">
+                <div class="card-body">
+                    <h2 class="card-title">Get Blogging!</h2>
+                    <h4 class="card-subtitle mb-2 text-muted">The best way to observe a fish is to become the fish. Let's hear your story after you sign-in!</h4>
+                    <hr>
+                    {{#if message}}
+                    <div class="alert alert-danger">{{message}}</div>
+                    {{/if}}
+                    <form class=" mt-5" id="signin" name="signin" method="post" action="signin">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" name="username" id="username" aria-describedby="usernameHelp" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password1">Password</label>
+                            <input type="password" class="form-control" name="password" id="password1" placeholder="Password">
+                            <hr>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" value="Sign In" id="sign-in-btn">Sign In</button>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div>

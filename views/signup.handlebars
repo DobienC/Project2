@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title"> Don't be Koi, Sign-Up! </h2>
+                    <h5 class="card-subtitle mb-2 text-muted">Once you sign up you will be able to:</h5>
+                    <h5 class="card-subtitle mb-2 text-muted">Share your ventures!</h5>
+                    <hr>
+                    {{#if message}}
+                    <div class="alert alert-danger">{{message}}</div>
+                    {{/if}}
+                    <form class="mt-5" id="signup" name="signup" method="post" action="/signup">
+                        <div class="form-group">
+                            <label for="username">Create Username</label>
+                            <input type="text" class="form-control" name="username" id="username" aria-describedby="usernameHelp" placeholder="Choose username">
+                        </div>
+                        {{!-- <div class="form-group">
+                            <label for="email1">Email</label>
+                            <input type="email" class="form-control" name="email" id="mail1" placeholder="Input Email">
+                        </div> --}}
+                        <div class="form-group">
+                            <label for="password1">Password</label>
+                            <input type="password" class="form-control" name="password" id="password1" placeholder="Create Password">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" value="Sign Up" id="sign-up-btn">Sign Up</button>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div>
