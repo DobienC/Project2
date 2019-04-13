@@ -16,18 +16,10 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       validate: {
         len: [1]
-
-      },
+    },
       image: {
         type: DataTypes.STRING
       }
-
-      }
-    },
-    image: {
-      type: DataTypes.STRING
-
-    }
   });
 
   // associating the post with the user db
