@@ -41,24 +41,24 @@
       <div class="text-center">
         <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalPostForm">Post Something</a>
       </div>
-              <h3>Recent Posts:</h3>
-              <div id="destination"></div>
-              <ul id="example-list" class="list-group">
-                {{#each db_posts}}
-                <li data-id="{{this.id}}" class="list-group-item">
-                  <a href="api/posts/{{this.id}}">{{this.text}}</a>
-                  <button class="btn btn-danger float-right delete">ｘ</button>
-                </li>
-                {{/each}}
-              </ul>
-            </div>
-          </div>
-        </div>
+      <h3>Recent Posts:</h3>
+      <div id="destination"></div>
+        {{!-- <ul id="example-list" class="list-group">
+            {{#each db_posts}}
+              <li data-id="{{this.id}}" class="list-group-item">
+                <a href="api/posts/{{this.id}}">{{this.text}}</a>
+              <button class="btn btn-danger float-right delete">ｘ</button>
+            </li>
+          {{/each}}
+        </ul> --}}
       </div>
+    </div>
+  </div>
+      {{!-- </div>
 
     </div>
   
   </div>
-</div>
+</div> --}}
 
 <script src="/js/post.js"></script>

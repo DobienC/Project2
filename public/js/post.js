@@ -23,19 +23,19 @@ var API = {
   }
 };
 
-var createPost = function() {
-  var $title = $("#post-text").val();
-  var $body = $("#post-description").val();
-  var $url = $("#post-url").val();
-  var post = {
-    category: $title,
-    body: $body,
-    image: $url
-  };
+// var createPost = function() {
+//   var $title = $("#post-text").val();
+//   var $body = $("#post-description").val();
+//   var $url = $("#post-url").val();
+//   var post = {
+//     category: $title,
+//     body: $body,
+//     image: $url
+//   };
 
-  API.createPost(post);
-  populate();
-};
+//   API.createPost(post);
+//   populate();
+// };
 
 function populate() {
   API.getPosts().then(function(data) {
@@ -72,14 +72,13 @@ $(document).ready(function() {
     console.log("button clicked");
     var title = $("#post-title").val();
     var body = $("#post-body").val();
-    var image = $("#post-image").val();
+    // var image = $("#post-image").val();
     console.log(title);
     console.log(body);
     API.createPost({
       category: title,
       body: body,
-      image: image,
-      UserId: 3
+      UserUserId: 1
     }).then(function() {
       renderPosts();
       populate();
@@ -91,8 +90,4 @@ function renderPosts() {
   API.getPosts().then(function(results) {
     console.log(results);
   });
-
 }
-
-}
-

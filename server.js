@@ -62,8 +62,6 @@ require("./config/passport/passport")(passport, models.User);
 
 var syncOptions = { force: false };
 
-
-
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
 if (process.env.NODE_ENV === "test") {
@@ -71,11 +69,7 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-<<<<<<< HEAD
-db.sequelize.sync({ force: true }).then(function() {
-=======
 db.sequelize.sync(syncOptions).then(function() {
->>>>>>> master
   app.listen(PORT, function() {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
