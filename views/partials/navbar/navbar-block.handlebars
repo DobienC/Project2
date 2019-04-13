@@ -1,0 +1,11 @@
+{{#unless user}}
+
+<a href="/signin" class="btn btn-outline-light nav-btn">Sign-in</a>
+
+<a href="/signup" class="btn btn-outline-light nav-btn">Sign-Up</a>
+{{/unless}}
+
+{{#if user}}
+    <a class= "userlink" id="uid" href="/blog/{{user.user_id}}" data-user_id-type={{user.user_id}} data_username="{{user.username}}">Welcome, {{user.username}}</a>
+    <a href="/logout" class="btn btn-outline-light nav-btn" id="logout">Logout</a>
+{{/if}}
